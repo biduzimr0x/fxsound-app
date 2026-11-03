@@ -1,0 +1,32 @@
+# Maintainer: henrique
+#
+# PKGBUILD local: compila a partir desta árvore do repositório (linux-port).
+# uso:  cd linux/pkg && makepkg -si
+pkgname=fxsound-linux
+pkgver=1.2.0
+pkgrel=5
+pkgdesc="FxSound (port não-oficial para Linux) - efeitos e equalizador para todo o sistema via PipeWire"
+arch=(x86_64 aarch64)
+url="https://github.com/fxsound2/fxsound-app"
+license=(AGPL-3.0-or-later)
+depends=(pipewire pipewire-pulse libpulse qt6-base gcc-libs glibc hicolor-icon-theme)
+makedepends=(meson ninja python)
+optdepends=('wireplumber: troca automática do dispositivo de saída padrão')
+provides=(fxsound)
+conflicts=(fxsound)
+
+_srcroot() { realpath "$startdir/../.."; }
+
+build() {
+  arch-meson "$(_srcroot)" build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+  install -Dm644 "$(_srcroot)/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

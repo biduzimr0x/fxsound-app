@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+Name=FxSound
+GenericName=Audio Enhancer
+GenericName[pt_BR]=Melhorador de áudio
+Comment=Equalizer and audio effects for the whole system (PipeWire)
+Comment[pt_BR]=Equalizador e efeitos de áudio para todo o sistema (PipeWire)
+Exec=fxsound
+Icon=fxsound
+Terminal=false
+Categories=AudioVideo;Audio;Mixer;Qt;
+Keywords=equalizer;eq;audio;sound;bass;pipewire;equalizador;som;graves;
+StartupWMClass=fxsound
+Actions=Toggle;
+
+[Desktop Action Toggle]
+Name=Toggle on/off
+Name[pt_BR]=Ligar/desligar
+Exec=fxsound --toggle

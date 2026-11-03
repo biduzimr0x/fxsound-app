@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- barras do logo do FxSound (fxsound/Images/logo-red.svg) -->
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="#1b1b22"/>
+  <g fill="#e63462">
+    <rect x="17" y="72" width="13.48" height="27.36" rx="2.83"/>
+    <rect x="37" y="50" width="13.48" height="49.35" rx="2.83"/>
+    <rect x="57" y="31" width="13.48" height="68.36" rx="2.83"/>
+    <rect x="77" y="50" width="13.48" height="49.35" rx="2.83"/>
+    <rect x="97" y="72" width="13.48" height="27.36" rx="2.83"/>
+  </g>
+</svg>
